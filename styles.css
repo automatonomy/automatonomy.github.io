@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'Roboto Flex';
+    src: url('RobotoFlex.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes wghtLFO {
+    0%, 100% { --wght: 100; }
+    50% { --wght: 900; }
+}
+@keyframes wdthLFO {
+    0%, 100% { --wdth: 75; }
+    50% { --wdth: 150; }
+}
+@keyframes opszLFO {
+    0%, 100% { --opsz: 8; }
+    50% { --opsz: 144; }
+}
+@keyframes slntLFO {
+    0%, 100% { --slnt: -10; }
+    50% { --slnt: 10; }
+}
+@keyframes gradLFO {
+    0%, 100% { --GRAD: -200; }
+    50% { --GRAD: 200; }
+}
+@keyframes xopqLFO {
+    0%, 100% { --XOPQ: 27; }
+    50% { --XOPQ: 175; }
+}
+@keyframes yopqLFO {
+    0%, 100% { --YOPQ: 25; }
+    50% { --YOPQ: 150; }
+}
+@keyframes ytucLFO {
+    0%, 100% { --YTUC: 500; }
+    50% { --YTUC: 700; }
+}
+@keyframes ytlcLFO {
+    0%, 100% { --YTLC: 400; }
+    50% { --YTLC: 700; }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Flex', sans-serif;
+    line-height: 1.6;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    animation:
+        wghtLFO 4s infinite ease-in-out,
+        wdthLFO 6s infinite ease-in-out,
+        opszLFO 8s infinite ease-in-out,
+        slntLFO 5s infinite ease-in-out,
+        gradLFO 7s infinite ease-in-out,
+        xopqLFO 3s infinite ease-in-out,
+        yopqLFO 4.2s infinite ease-in-out,
+        ytucLFO 4.5s infinite ease-in-out,
+        ytlcLFO 5.5s infinite ease-in-out;
+    font-variation-settings:
+        "wght" var(--wght, 400),
+        "wdth" var(--wdth, 100),
+        "opsz" var(--opsz, 14),
+        "slnt" var(--slnt, 0),
+        "GRAD" var(--GRAD, 0),
+        "XOPQ" var(--XOPQ, 100),
+        "YOPQ" var(--YOPQ, 100),
+        "YTUC" var(--YTUC, 600),
+        "YTLC" var(--YTLC, 500);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem;
+    animation:
+        wghtLFO 5s infinite ease-in-out,
+        wdthLFO 7s infinite ease-in-out,
+        slntLFO 6s infinite ease-in-out;
+    font-variation-settings:
+        "wght" var(--wght, 400),
+        "wdth" var(--wdth, 100),
+        "slnt" var(--slnt, 0);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.links a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    animation:
+        xopqLFO 3s infinite ease-in-out,
+        ytucLFO 4.5s infinite ease-in-out,
+        ytlcLFO 5.5s infinite ease-in-out;
+    font-variation-settings:
+        "XOPQ" var(--XOPQ, 100),
+        "YTUC" var(--YTUC, 600),
+        "YTLC" var(--YTLC, 500);
+}
+
+.links a:hover {
+    color: #ff0000;
+    font-size: 1.4rem;
+    animation-play-state: paused;
+}
